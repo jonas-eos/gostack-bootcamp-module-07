@@ -1,5 +1,17 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
 
 export default function App() {
-  return <h1>Hello Redux</h1>;
+  return (
+    /**
+     * The BrowserRouter used in App, allows elements to interact globally with
+     * other elements.
+     */
+    <BrowserRouter>
+      {/* <Header/> */}
+      <Routes />
+    </BrowserRouter>
+  );
 }
