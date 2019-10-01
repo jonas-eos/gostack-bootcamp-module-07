@@ -14,6 +14,7 @@ export default function App() {
     /**
      * The BrowserRouter used in App, allows elements to interact globally with
      * other elements.
+     * All component inside Provider element, have access to the redux store.
      */
     <Provider store={store}>
       <BrowserRouter>
