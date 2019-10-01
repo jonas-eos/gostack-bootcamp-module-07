@@ -20,6 +20,19 @@ export default function cart(state = [], action) {
         }
       });
 
+    case 'REMOVE_FROM_CART':
+      return produce(state, draft => {
+        const tempState = draft;
+
+        const productIndex = draft.findIndex(
+          productInCart => productInCart.id === action.id
+        );
+
+        if (productIndex >= 0) {
+          tempState.splice(productIndex, 1);
+        }
+      });
+
     default:
       return state;
   }
